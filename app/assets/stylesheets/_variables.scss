@@ -1,0 +1,28 @@
+/*------------------------------------*\
+  #VARIABLES
+\*------------------------------------*/
+
+/* Colors */
+
+$light-grey:            #f3f3f3 !default;
+$dark-grey:             #444543 !default;
+
+$primary-color:         #ffd700 !default;
+$secondary-color:       #00447c !default;
+$tertiary-color:        #198C19 !default;
+
+$border-color:          #bbb !default;
+$link-color:            #1eaedb !default;
+$font-color:            #222 !default;
+
+$navbar-bgcolor:        $dark-grey;
+$heading-color:         $secondary-color;
+
+
+
+
+/* Typography */
+
+$brand-font-family:     "Righteous", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family:           "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$heading-font-family:   "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
