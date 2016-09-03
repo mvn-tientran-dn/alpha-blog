@@ -1,0 +1,32 @@
+.navbar {
+  height: 8rem;
+  padding: 0 2rem;
+  
+  background-color: $dark-grey;
+}
+
+.brand {
+  float: left;
+
+  font-size: 2.5rem;
+  line-height: 8rem;
+}
+
+.main-navigation {
+  float: right;
+}
+
+.menu {
+  margin: 0;
+  padding:0;
+
+  list-style: none;
+}
+
+.menu__item {
+  display: inline-block;
+  margin: 0;
+  padding:0;
+
+  line-height: 8rem;
+}

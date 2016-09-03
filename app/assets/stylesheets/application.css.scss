@@ -17,7 +17,15 @@
 
 @import
   'variables',
-  'skeleton-scss/skeleton';
+  'skeleton-scss/skeleton',
+
+  'links',
+
+  'navigation/navigation',
+  'navigation/section-actions',
+
+  'footer'
+  ;
 
 
 
@@ -30,3 +38,22 @@
 html {
   background-color: $light-grey;
 }
+
+table {
+  width: 100%;
+}
+
+.button.button-primary {
+  color: $dark-grey;
+}
+
+.cta {
+  margin: 3rem 0;
+  padding: 5rem 2rem;
+  border-radius: $global-radius;
+
+  text-align: center;
+  color: #fff;
+  background-color: $secondary-color;
+}
+
