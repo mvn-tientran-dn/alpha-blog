@@ -1,4 +1,3 @@
-<article class="article">
 <div class="section-actions">
   <%= link_to 'Delete', article_path(@article),
     method: :delete,
@@ -8,10 +7,11 @@
   <%= link_to 'Back to listing', articles_path, class: "button" %>
 </div>
 
-<div class="section-content article__body eight columns offset-by-two">
-  <h2 class="article__title"><%= @article.title %></h2>
+<div class="section-content">
 
-  <p><%= @article.description %></p>
+  <article class="article">
+    <h2 class="article__title"><%= @article.title %></h2>
+    <p class="article__body"><%= @article.description %></p>
+  </article>
 
 </div>
-</article>

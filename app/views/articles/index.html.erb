@@ -1,28 +1,22 @@
 <div class="section-actions">
-  <h2 class="section-title">Articles List</h2>
+  <h2 class="section-title">All Articles</h2>
   <%= link_to 'New article', new_article_path, class: "button" %>
 </div>
 
-<div class="section-content">
-  <table>
+<div class="section-content articles-list">
 
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Actions</th>
-    </tr>
+  <% @articles.each do |article| %>
+    <article class="article">
+      <h4 class="article__title"><%= link_to article.title, article_path(article) %></h2>
+      <p class="article__body"><%= truncate(article.description, lenght: 50) %></p>
+      <div class="row">
+        <%= link_to 'Delete', article_path(article),
+          method: :delete,
+          data: {confirm: "Are you sure you want to delete article '#{article.title}'?"},
+          class: "button button-danger" %>
+        <%= link_to 'Edit', edit_article_path(article), class: "button" %>
+      </div>
+    </article>
+  <% end %>
 
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= link_to article.title, article_path(article) %></td>
-        <td><%= article.description %></td>
-        <td>
-          <%= link_to 'Edit', edit_article_path(article) %>
-          <%= link_to 'Show', article_path(article) %>
-          <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: "Are you sure you want to delete article '#{article.title}'?"} %>
-        </td>
-      </tr>
-    <% end %>
-
-  </table>
 </div>
