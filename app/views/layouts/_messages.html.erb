@@ -1,7 +1,9 @@
 <% unless flash.blank? %>
-<ul>
-<% flash.each do |name, msg| %>
-  <li><%= msg %></li>
-<% end %>
-</ul>
+<div class="messages messages--success">
+  <ul class="messages__list">
+  <% flash.each do |name, msg| %>
+    <li class="messages__item"><%= msg %></li>
+  <% end %>
+  </ul>
+</div>
 <% end %>

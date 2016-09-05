@@ -1,0 +1,44 @@
+/*------------------------------------*\
+  #MESSAGES
+\*------------------------------------*/
+
+.messages {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: $global-radius;
+
+  text-align: center;
+}
+
+.messages__list {
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.messages__item {
+  margin-bottom: 0;
+}
+
+
+/*------------------------------------*\
+  #ERROR MESSAGES
+\*------------------------------------*/
+
+.messages--errors {
+  background-color: #f99;
+  text-align: left;
+}
+
+.messages--errors .messages__list {
+  padding-left:2rem;
+  list-style: disc;
+}
+
+
+/*------------------------------------*\
+  #SUCCESS MESSAGES
+\*------------------------------------*/
+
+.messages--success {
+  background-color: #0f7;
+}
