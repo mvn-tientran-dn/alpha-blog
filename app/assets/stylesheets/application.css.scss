@@ -20,12 +20,15 @@
   'skeleton-scss/skeleton',
 
   'links',
+  'buttons',
   'messages',
 
   'navigation/navigation',
   'navigation/section-actions',
 
-  'footer'
+  'footer',
+
+  'articles'
   ;
 
 
@@ -47,10 +50,6 @@ table {
 textarea {
   height: auto;
   min-height: auto;
-}
-
-.button.button-primary {
-  color: $dark-grey !important;
 }
 
 

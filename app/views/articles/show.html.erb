@@ -1,13 +1,17 @@
+<article class="article">
 <div class="section-actions">
-  <h2 class="section-title"><%= @article.title %></h2>
+  <%= link_to 'Delete', article_path(@article),
+    method: :delete,
+    data: {confirm: "Are you sure you want to delete article '#{@article.title}'?"},
+    class: "button button-danger" %>
   <%= link_to 'Edit', edit_article_path(@article), class: "button" %>
   <%= link_to 'Back to listing', articles_path, class: "button" %>
 </div>
 
-<div class="section-content">
-  <div class="row">
+<div class="section-content article__body eight columns offset-by-two">
+  <h2 class="article__title"><%= @article.title %></h2>
 
-    <p><%= @article.description %></p>
+  <p><%= @article.description %></p>
 
-  </div>
 </div>
+</article>
