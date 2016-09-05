@@ -43,9 +43,22 @@ table {
   width: 100%;
 }
 
-.button.button-primary {
-  color: $dark-grey;
+textarea {
+  height: auto;
+  min-height: auto;
 }
+
+.button.button-primary {
+  color: $dark-grey !important;
+}
+
+
+
+.main {
+  padding-top: 3rem;
+}
+
+
 
 .cta {
   margin: 3rem 0;
@@ -56,4 +69,3 @@ table {
   color: #fff;
   background-color: $secondary-color;
 }
-

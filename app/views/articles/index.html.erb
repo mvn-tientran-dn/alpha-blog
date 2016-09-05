@@ -1,8 +1,7 @@
-<%
-@section_title = "Articles List"
-%>
-
-<%= render 'actions' %>
+<div class="section-actions">
+  <h2 class="section-title">Articles List</h2>
+  <%= link_to 'New article', new_article_path, class: "button" %>
+</div>
 
 <div class="section-content">
   <table>

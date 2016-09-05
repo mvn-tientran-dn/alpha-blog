@@ -1,5 +1,5 @@
 <% if @article.errors.any? %>
-  <h4>The following erros prevented the article from getting created:</h4>
+  <h4>The following erros prevented the article from getting saved:</h4>
   <ul>
   <% @article.errors.full_messages.each do |msg| %>
     <li><%= msg %></li>
@@ -10,18 +10,20 @@
 
 <%= form_for @article do |f| %>
 
+<div class="eight columns offset-by-two">
   <p>
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "u-full-width" %>
   </p>
 
   <p>
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, rows: 10, class: "u-full-width" %>
   </p>
 
   <p>
-    <%= f.submit %>
+    <%= f.submit class: "button button-primary" %>
   </p>
+</div>
 
 <% end %>
