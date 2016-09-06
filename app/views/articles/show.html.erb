@@ -11,10 +11,17 @@
 
   <article class="article">
     <h2 class="article__title"><%= @article.title %></h2>
-    <p class="article__meta">
-      <span class="article__author">by <%=link_to @article.user.username, user_path(@article.user) %></span>
-      <span class="article__time">created <%= time_ago_in_words(@article.created_at) %> ago, last updated <%= time_ago_in_words(@article.updated_at) %> ago</span>
-    </p>
+    <div class="article__meta">
+
+      <ul class="article__author user-data__list">
+        <li>Create by</li>
+        <li class="user-data__image"><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
+        <li class="user-data__username"><%= link_to @article.user.username, user_path(@article.user) %></li>
+        <li class="user-data__articles-count"><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></li>
+      </ul>
+
+      <span class="article__time"><%= time_ago_in_words(@article.created_at) %> ago, last updated <%= time_ago_in_words(@article.updated_at) %> ago</span>
+    </div>
     <p class="article__body"><%= @article.description %></p>
   </article>
 

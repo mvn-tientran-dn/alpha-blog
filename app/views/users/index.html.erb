@@ -1,0 +1,17 @@
+<div class="section-actions">
+  <h2 class="section-title">All Alpha Bloggers</h2>
+</div>
+
+<div class="row users-list">
+  <div class="eight columns offset-by-two">
+    <% @users.each do |user| %>
+      <div class="user-data">
+        <ul>
+          <li class="user-data__image"><%= link_to gravatar_for(user), user_path(user) %></li>
+          <li class="user-data__username"><%= link_to user.username, user_path(user) %></li>
+          <li class="user-data__articles-count"><%= pluralize(user.articles.count, "article") if user.articles %></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>
