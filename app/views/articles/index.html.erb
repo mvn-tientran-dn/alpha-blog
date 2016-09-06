@@ -8,6 +8,9 @@
   <% @articles.each do |article| %>
     <article class="article">
       <h4 class="article__title"><%= link_to article.title, article_path(article) %></h2>
+      <p class="article__meta">by <%= article.user.username %>
+                                created <%= time_ago_in_words(article.created_at) %> ago,
+                                last updated <%= time_ago_in_words(article.updated_at) %> ago</p>
       <p class="article__body"><%= truncate(article.description, lenght: 50) %></p>
       <div class="row">
         <%= link_to 'Delete', article_path(article),

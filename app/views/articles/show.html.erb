@@ -11,6 +11,9 @@
 
   <article class="article">
     <h2 class="article__title"><%= @article.title %></h2>
+    <p class="article__meta">by <%= @article.user.username %>
+                            created <%= time_ago_in_words(@article.created_at) %> ago,
+                            last updated <%= time_ago_in_words(@article.updated_at) %> ago</p>
     <p class="article__body"><%= @article.description %></p>
   </article>
 
