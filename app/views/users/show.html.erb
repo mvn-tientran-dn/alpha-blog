@@ -5,5 +5,15 @@
 
 <div class="row">
   <h5 class="user-articles__title"><%= @user.username %>'s articles</h5>
-  <%= render 'articles/articles_list', obj: @user.articles %>
+
+  <div class="row">
+    <%= will_paginate @user_articles %>
+  </div>
+
+  <%= render 'articles/articles_list', obj: @user_articles %>
+
+  <div class="row">
+    <%= will_paginate @user_articles %>
+  </div>
+
 </div>

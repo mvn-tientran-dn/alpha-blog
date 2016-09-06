@@ -4,6 +4,11 @@
 
 <div class="row users-list">
   <div class="eight columns offset-by-two">
+    
+    <div class="row">
+      <%= will_paginate %>
+    </div>
+
     <% @users.each do |user| %>
       <div class="user-data">
         <ul>
@@ -13,5 +18,10 @@
         </ul>
       </div>
     <% end %>
+
+    <div class="row">
+      <%= will_paginate %>
+    </div>
+
   </div>
 </div>
