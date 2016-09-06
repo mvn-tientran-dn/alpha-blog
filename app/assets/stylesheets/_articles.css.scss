@@ -6,6 +6,7 @@
   }
 
   .article__body {
+    margin-top: 1rem;
     margin-bottom: .5rem;
   }
 
@@ -25,11 +26,14 @@
 }
 
 .article__meta {
-  margin-bottom: 5rem;
   padding: 1rem 0;
   font-size: 80%;
   border-top: solid .1rem $border-color;
   border-bottom: solid .1rem $border-color;
 
   text-align: center;
+}
+
+.article__body {
+  margin-top: 5rem;
 }
