@@ -28,7 +28,8 @@
 
   'footer',
 
-  'articles'
+  'articles',
+  'users'
   ;
 
 
@@ -68,4 +69,10 @@ textarea {
   text-align: center;
   color: #fff;
   background-color: $secondary-color;
+}
+
+
+
+.img-circle {
+  border-radius: 100%;
 }

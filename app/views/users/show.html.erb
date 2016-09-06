@@ -1,0 +1,13 @@
+<div class="section-actions twelve columns">
+  
+</div>
+
+<div class="row profile">
+  <h2 class="profile__name"><%= @user.username %>'s page</h2>
+  <%= gravatar_for @user, size: 150 %>
+</div>
+
+<div class="row">
+  <h5 class="user-articles__title"><%= @user.username %>'s articles</h5>
+  <%= render 'articles/articles', obj: @user.articles %>
+</div>
