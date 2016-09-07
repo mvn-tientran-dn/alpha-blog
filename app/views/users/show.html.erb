@@ -1,3 +1,7 @@
+<div class="section-actions">
+  <%= link_to 'Edit account', edit_user_path(current_user), class: "button" %>
+</div>
+
 <div class="row profile">
   <h2 class="profile__name"><%= @user.username %>'s page</h2>
   <%= gravatar_for @user, size: 150 %>
