@@ -8,6 +8,8 @@
         <span class="article__time">created <%= time_ago_in_words(article.created_at) %> ago, last updated <%= time_ago_in_words(article.updated_at) %> ago</span>
       </p>
       <p class="article__body"><%= truncate(article.description, lenght: 50) %></p>
+
+      <% if logged_in? && current_user == article.user %>
       <div class="row">
         <%= link_to 'Delete', article_path(article),
           method: :delete,
@@ -15,6 +17,8 @@
           class: "button button-danger" %>
         <%= link_to 'Edit', edit_article_path(article), class: "button" %>
       </div>
+      <% end %>
+      
     </article>
   <% end %>
 
