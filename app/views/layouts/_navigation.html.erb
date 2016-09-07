@@ -9,7 +9,8 @@
       <li class="menu__item"><%= link_to 'Bloggers', users_path %></li>
 
       <% if logged_in? %>
-        <li class="menu__item"><%= link_to 'Profile', user_path(current_user) %></li>
+        <% profile_link_text = current_user.admin? ? "Your Profile (admin)" : "Your Profile" %>
+        <li class="menu__item"><%= link_to profile_link_text, user_path(current_user) %></li>
         <li class="menu__item"><%= link_to 'Log out', logout_path, method: :delete %></li>
       <% else %>
         <li class="menu__item"><%= link_to 'Log in', login_path %></li>
