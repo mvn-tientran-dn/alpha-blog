@@ -1,6 +1,6 @@
 <div class="section-actions">
 
-  <% if logged_in? && current_user == @user %>
+  <% if logged_in? && (current_user == @user || current_user.admin?) %>
   <%= link_to 'Edit account', edit_user_path(current_user), class: "button" %>
   <% end %>
   
