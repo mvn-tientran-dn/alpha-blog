@@ -1,0 +1,23 @@
+<div class="section-actions twelve columns">
+  <h2 class="section-title">Log in</h2>
+</div>
+
+<%= render 'shared/errors', object: @user %>
+
+<%= form_for :session, url: login_path do |f| %>
+
+<div class="four columns offset-by-four">
+  <p>
+    <%= f.label :email %>
+    <%= f.email_field :email, class: "u-full-width" %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password, class: "u-full-width", autocomplete: "off" %>
+  </p>
+
+  <p>
+    <%= f.submit "Log in", class: "button button-primary" %>
+  </p>
+</div>
+
+<% end %>
