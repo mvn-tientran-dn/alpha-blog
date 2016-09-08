@@ -77,6 +77,14 @@ textarea {
   border-radius: 100%;
 }
 
+.pill {
+  margin-right: .5rem;
+  padding: .5rem;
+  border-radius: 1.5rem;
+  background-color: $light-grey;
+  color: $secondary-color;
+  text-transform: lowercase;
+}
 
 
 .pagination {
