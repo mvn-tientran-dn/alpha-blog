@@ -1,0 +1,15 @@
+<%= render 'shared/errors', object: @category %>
+
+<%= form_for @category do |f| %>
+
+<div class="eight columns offset-by-two">
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "u-full-width" %>
+  </p>
+  <p>
+    <%= f.submit class: "button button-primary" %>
+  </p>
+</div>
+
+<% end %>
