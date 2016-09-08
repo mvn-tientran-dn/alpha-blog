@@ -15,10 +15,10 @@ class CategoryTest < ActiveSupport::TestCase
     assert_not @category.valid?
   end
 
-  test "name should be unique" do
+  test "name should be unique with case sensitive" do
     @category.save
 
-    category2 = Category.create(name: "sports")
+    category2 = Category.create(name: "Sports")
 
     assert_not category2.valid?
   end
