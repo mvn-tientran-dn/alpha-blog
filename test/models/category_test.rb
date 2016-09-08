@@ -33,4 +33,8 @@ class CategoryTest < ActiveSupport::TestCase
     assert_not @category.valid?
   end
 
+  test "should respond_to articles" do
+    assert @category.respond_to?('articles')
+  end
+
 end
