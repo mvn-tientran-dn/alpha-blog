@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="section-actions">
+    <h2 class="section-title">Category <%= @category.name %></h2>
+  </div>
+</div>
+
+<div class="row">
+  <%= will_paginate @category_articles %>
+</div>
+
+<%= render 'articles/articles_list', obj: @category_articles %>
+
+<div class="row">
+  <%= will_paginate @category_articles %>
+</div>

@@ -1,10 +1,12 @@
-<div class="section-actions">
+<div class="row">
+  <div class="section-actions">
 
-  <% if logged_in? && current_user == @user %>
-  <%= link_to 'Edit account', edit_user_path(current_user), class: "button" %>
-  <% end %>
-  
-</div>
+    <% if logged_in? && current_user == @user %>
+    <%= link_to 'Edit account', edit_user_path(current_user), class: "button" %>
+    <% end %>
+    
+  </div>
+<div class="row">
 
 <div class="row profile">
   <h2 class="profile__name"><%= @user.username %>'s page</h2>

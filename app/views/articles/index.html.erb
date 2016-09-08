@@ -1,9 +1,11 @@
-<div class="section-actions">
-  <h2 class="section-title">All Articles</h2>
+<div class="row">
+  <div class="section-actions">
+    <h2 class="section-title">All Articles</h2>
 
-  <% if logged_in? and current_user.admin? %>
-    <%= link_to 'New article', new_article_path, class: "button" %>
-  <% end %>
+    <% if logged_in? and current_user.admin? %>
+      <%= link_to 'New article', new_article_path, class: "button" %>
+    <% end %>
+  </div>
 </div>
 
 <div class="row">
