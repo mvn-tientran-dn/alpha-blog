@@ -5,7 +5,13 @@
       <h4 class="article__title"><%= link_to article.title, article_path(article) %></h2>
       <p class="article__meta">
         <span class="article__author">created by <%=link_to article.user.username, user_path(article.user) %></span>
-        <span class="article__time"><%= time_ago_in_words(article.created_at) %> ago, last updated <%= time_ago_in_words(article.updated_at) %> ago</span>
+        <span class="article__time"><%= time_ago_in_words(article.created_at) %> ago, last updated <%= time_ago_in_words(article.updated_at) %> ago.</span>
+
+        <% if article.categories.any? %>
+          <span class="article__categories">
+            In categories <%= render article.categories %>
+          </span>
+        <% end %>
       </p>
       <p class="article__body"><%= truncate(article.description, lenght: 50) %></p>
 
