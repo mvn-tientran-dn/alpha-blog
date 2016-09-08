@@ -12,10 +12,10 @@
       <% if logged_in? %>
         <% profile_link_text = current_user.admin? ? "Your Profile (admin)" : "Your Profile" %>
         <li class="menu__item"><%= link_to profile_link_text, user_path(current_user) %></li>
-        <li class="menu__item"><%= link_to 'Log out', logout_path, method: :delete %></li>
+        <li class="menu__item"><%= link_to 'Log out', logout_path, method: :delete, class: "button button-primary" %></li>
       <% else %>
-        <li class="menu__item"><%= link_to 'Log in', login_path %></li>
-        <li class="menu__item"><%= link_to 'Sign up', signup_path %></li>
+        <li class="menu__item"><%= link_to 'Log in', login_path, class: "button button-primary" %></li>
+        <li class="menu__item"><%= link_to 'Sign up', signup_path, class: "button button-primary" %></li>
       <% end %>
 
     </ul>
