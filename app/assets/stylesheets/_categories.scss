@@ -1,0 +1,20 @@
+.category-data__list {
+  margin-top: 2rem;
+  list-style: none;
+
+  text-align: center;
+
+  .pill {
+    background-color: #fff;
+  }
+
+  .category-data__name {
+    font-size: 2rem;
+    color: $link-color;
+  }
+
+  .category-data__articles-count {
+    display: block;
+    width: 100%;
+  }
+}
