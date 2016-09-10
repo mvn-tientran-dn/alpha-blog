@@ -33,11 +33,11 @@ Article **many_to_many ** Category
 
 # Technologies
 
-- This project was developed using
-  - Ruby 2.2.3
-  - Rails 4.2.6
-  - gem will_paginate 3.0.7
-  - Skeleton CSS Boilerplate
+- Ruby 2.2.3
+- Rails 4.2.6
+- minitest - for automated tests
+- gem will_paginate 3.0.7
+- Skeleton CSS Boilerplate
 
 # Demo
 
