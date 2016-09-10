@@ -2,7 +2,7 @@
   <div class="section-actions">
     <h2 class="section-title">All Articles</h2>
 
-    <% if logged_in? and current_user.admin? %>
+    <% if logged_in? %>
       <%= link_to 'New article', new_article_path, class: "button" %>
     <% end %>
   </div>
