@@ -1,4 +1,7 @@
 class Article < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   belongs_to :user
   has_many :article_categories
   has_many :categories, through: :article_categories
