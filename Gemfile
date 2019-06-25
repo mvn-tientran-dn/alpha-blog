@@ -15,7 +15,7 @@ gem 'uglifier'
 # gem 'mini_racer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails'
+gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 # gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -33,9 +33,9 @@ gem 'bcrypt'
 # gem 'will_paginate'
 gem 'rb-readline'
 gem 'friendly_id', '~> 5.2.4'
-gem 'rails_admin'
+gem 'rails_admin', '1.4.2'
 gem 'kaminari'
-gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'ckeditor', '4.2.4'
 gem 'carrierwave'
 gem 'mini_magick'
 
