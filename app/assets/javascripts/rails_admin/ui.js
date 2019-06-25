@@ -1,0 +1,1 @@
+//= require rails_admin/ckeditor_ajax

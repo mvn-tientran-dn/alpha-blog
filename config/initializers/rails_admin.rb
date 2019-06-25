@@ -51,4 +51,16 @@ RailsAdmin.config do |config|
   end
 
   config.excluded_models << "ArticleCategory"
+  config.model Article do
+    include_all_fields
+    edit do
+      # For RailsAdmin >= 0.5.0
+      field :title
+      field :description, :ck_editor
+      # For RailsAdmin < 0.5.0
+      # field :description do
+      #   ckeditor true
+      # end
+    end
+  end
 end
