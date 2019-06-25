@@ -22,8 +22,8 @@
 
       <ul class="article__author user-data__list">
         <li>Create by</li>
-        <li class="user-data__image"><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
-        <li class="user-data__username"><%= link_to @article.user.username, user_path(@article.user) %></li>
+        <li class="user-data__image"><%= gravatar_for(@article.user)%></li>
+        <li class="user-data__username"><%= @article.user.username%></li>
         <li class="user-data__articles-count"><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></li>
       </ul>
 

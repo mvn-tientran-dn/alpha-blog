@@ -31,9 +31,11 @@ gem 'bcrypt'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'will_paginate'
+# gem 'will_paginate'
 gem 'rb-readline'
 gem 'friendly_id', '~> 5.2.4'
+gem 'rails_admin', '~> 2.0.0.beta'
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

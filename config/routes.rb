@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'pages#home'
 
   get 'about', to: 'pages#about'
@@ -10,8 +11,8 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
 
   resources :articles
-  resources :users, except: [:new]
-  resources :categories, except: [:destroy]
+  # resources :users, except: [:new]
+  # resources :categories, except: [:destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
